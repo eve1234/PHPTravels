@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="29241" started-at="2018-02-02T22:41:17Z" finished-at="2018-02-02T22:41:46Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="29241" started-at="2018-02-02T22:41:17Z" finished-at="2018-02-02T22:41:46Z">
+      <class name="com.phpTravels.PHPTravels.SearchHotels">
+        <test-method status="PASS" signature="searchHotel()[pri:0, instance:com.phpTravels.PHPTravels.SearchHotels@5034c75a]" name="searchHotel" duration-ms="29204" started-at="2018-02-02T22:41:17Z" finished-at="2018-02-02T22:41:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchHotel -->
+      </class> <!-- com.phpTravels.PHPTravels.SearchHotels -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
