@@ -163,7 +163,7 @@ public class HomePage extends TestBase{
 	}
 	
 	public HotelsPage quickHomePageHotelLinkPage() throws InterruptedException {
-			
+		//pick the date of the checkin
 		quickHomePageHotelLink.click();
 		driver.findElement(By.xpath("//*[@id=\'body-section\']/div[1]/div/div/div[1]/div/ul/li[1]/a")).click();
 		
@@ -171,13 +171,13 @@ public class HomePage extends TestBase{
 		driver.findElement(By.cssSelector("#dpd1 > input")).click();
 		
 		Thread.sleep(2000);
-		String expectedMouth= "June 2018";
+		String chckInExpectedMouth= "June 2018";
+		String chckOutExpectedMouth= "July 2018";
 		
 		
+		String chckInCurrentMonth=driver.findElement(By.cssSelector("body > div:nth-child(23) > div.datepicker-days > table > thead > tr:nth-child(1) > th.switch")).getText();
 		
-		String currentMonth=driver.findElement(By.cssSelector("body > div:nth-child(23) > div.datepicker-days > table > thead > tr:nth-child(1) > th.switch")).getText();
-		
-		if (expectedMouth.equals(currentMonth)) {
+		if (chckInExpectedMouth.equals(chckInCurrentMonth)) {
 			System.out.println("The month entered is already selected");
 		}
 		//if expectedMouth entering is not already selected the do the following
@@ -190,11 +190,11 @@ public class HomePage extends TestBase{
 				
 				
 				//returning the value of current month
-				currentMonth=driver.findElement(By.xpath("/html/body/div[14]/div[1]/table/thead/tr[1]/th[2]")).getText();
+				chckInCurrentMonth=driver.findElement(By.xpath("/html/body/div[14]/div[1]/table/thead/tr[1]/th[2]")).getText();
 			
 				
-				if (expectedMouth.equals(currentMonth)) {
-					System.out.println("Expected month now selected  " + currentMonth);
+				if (chckInExpectedMouth.equals(chckInCurrentMonth)) {
+					System.out.println("Expected month now selected  " + chckInCurrentMonth);
 					break; //because we do not want to loop to carry on with next link being clicked again
 				}
 			}
@@ -203,47 +203,97 @@ public class HomePage extends TestBase{
 		//getting the days of the month
 		//td contains the days of the month
 		//webElement for the parent
-		WebElement datePicker=driver.findElement(By.xpath("/html/body/div[14]/div[1]/table/tbody"));
+		WebElement chckInDatePicker=driver.findElement(By.xpath("/html/body/div[14]/div[1]/table/tbody"));
 		
 		
 		
 		//pick up all tds - days inside trs of tbody
-		List<WebElement> dates=datePicker.findElements(By.tagName("td"));
+		List<WebElement> chckInDates=chckInDatePicker.findElements(By.tagName("td"));
 		
 		//for each date in a collection of dates webElements
-		for(WebElement date : dates) {
+		for(WebElement chckInDate : chckInDates) {
 		
-			String calenDates = date.getText();
-			System.out.println(calenDates);
+			String chckInCalenDates = chckInDate.getText();
+			System.out.println(chckInCalenDates);
 			
 			
-			if(calenDates.equals("5")) {
-				date.click();
+			if(chckInCalenDates.equals("5")) {
+				chckInDate.click();
+				break;
+	
+			}
+	
+		}//end of for loop
+		
+		
+		
+		  //pick the date of the checkout
+		 
+		
+		String chckOutCurrentMonth=driver.findElement(By.xpath("//*[@id=\"dpd2\"]/input")).getText();
+		
+		if (chckOutExpectedMouth.equals(chckOutCurrentMonth)) {
+			System.out.println("The check out month entered is already selected");
+		}
+		//if expectedMouth entering is not already selected the do the following
+		else {
+			for(int i=1; i<12;i++) {
+				//clicking on the next button
+				driver.findElement(By.xpath("/html/body/div[15]/div[1]/table/thead/tr[1]/th[3]")).click();
+				//Thread.sleep(2000);
+				
+				
+				
+				//returning the value of current month
+				chckOutCurrentMonth=driver.findElement(By.xpath("/html/body/div[14]/div[1]/table/thead/tr[1]/th[2]")).getText();
+			
+				
+				if (chckOutExpectedMouth.equals(chckOutCurrentMonth)) {
+					System.out.println("CHeck out Expected month now selected  " + chckOutCurrentMonth);
+					break; //because we do not want to loop to carry on with next link being clicked again
+				}
+			}
+		}
+		//Thread.sleep(2000);
+		//getting the days of the month
+		//td contains the days of the month
+		//webElement for the parent
+		WebElement chckOutDatePicker=driver.findElement(By.xpath("/html/body/div[15]/div[1]/table/tbody"));
+		///html/body/div[15]/div[1]/table/tbody
+		
+		
+		
+		//pick up all tds - days inside trs of tbody
+		List<WebElement> chckOutDates=chckOutDatePicker.findElements(By.tagName("td"));
+		
+		//for each date in a collection of dates webElements
+		for(WebElement chckOutDate : chckOutDates) {
+		
+			String chckOutCalenDates = chckOutDate.getText();
+			System.out.println(chckOutCalenDates);
+			
+			
+			if(chckOutCalenDates.equals("7")) {
+				chckOutDate.click();
+				Thread.sleep(2000);
+				System.out.println(chckOutDate);
 				break;
 			
 	
-			}
+			}//end of if
+		
+	
+		}//end of for loop
 		
 		
+		//leave everything else selected then click search button
+		driver.findElement(By.xpath("//*[@id=\"HOTELS\"]/form/div[3]/div[3]/button")).click();
+		System.out.println("Search completed");
+	return new HotelsPage();
 	
+	}//end of method
 	
-		}
 		
-			
-			return new HotelsPage();
-			
 	
-	}
-
+}//end of class
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-}

@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14593" started-at="2018-04-24T16:33:10Z" finished-at="2018-04-24T16:33:25Z">
+  <suite name="Default suite" duration-ms="23962" started-at="2018-04-24T17:59:46Z" finished-at="2018-04-24T18:00:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14593" started-at="2018-04-24T16:33:10Z" finished-at="2018-04-24T16:33:25Z">
+    <test name="Default test" duration-ms="23962" started-at="2018-04-24T17:59:46Z" finished-at="2018-04-24T18:00:10Z">
       <class name="com.phpTravels.qa.testcases.HomePageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.phpTravels.qa.testcases.HomePageTest@3f49dace]" name="setUp" is-config="true" duration-ms="9146" started-at="2018-04-24T17:33:10Z" finished-at="2018-04-24T17:33:20Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.phpTravels.qa.testcases.HomePageTest@1dfe2924]" name="setUp" is-config="true" duration-ms="6983" started-at="2018-04-24T18:59:46Z" finished-at="2018-04-24T18:59:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="quickHomePageHotelLinkPageTest()[pri:1, instance:com.phpTravels.qa.testcases.HomePageTest@3f49dace]" name="quickHomePageHotelLinkPageTest" duration-ms="5239" started-at="2018-04-24T17:33:20Z" finished-at="2018-04-24T17:33:25Z">
+        <test-method status="PASS" signature="quickHomePageHotelLinkPageTest()[pri:1, instance:com.phpTravels.qa.testcases.HomePageTest@1dfe2924]" name="quickHomePageHotelLinkPageTest" duration-ms="16753" started-at="2018-04-24T18:59:53Z" finished-at="2018-04-24T19:00:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quickHomePageHotelLinkPageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.phpTravels.qa.testcases.HomePageTest@3f49dace]" name="tearDown" is-config="true" duration-ms="179" started-at="2018-04-24T17:33:25Z" finished-at="2018-04-24T17:33:25Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.phpTravels.qa.testcases.HomePageTest@1dfe2924]" name="tearDown" is-config="true" duration-ms="202" started-at="2018-04-24T19:00:09Z" finished-at="2018-04-24T19:00:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
