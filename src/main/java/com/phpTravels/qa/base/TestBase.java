@@ -33,7 +33,7 @@ public class TestBase {
 			        
 			        try{
 			            prop=new Properties();
-			            FileInputStream f= new FileInputStream(System.getProperty("user.dir")+"/src/main/java/com/evevoni"
+			            FileInputStream f= new FileInputStream(System.getProperty("user.dir")+"/src/main/java/com/phpTravels"
 			                    + "/qa/config/config.properties");
 			            prop.load(f);
 			            

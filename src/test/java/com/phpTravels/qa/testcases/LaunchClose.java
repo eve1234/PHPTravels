@@ -12,7 +12,7 @@ public class LaunchClose {
 	@BeforeClass
 	public void launchApp() {
 		//instantiate Chrome Browser driver
-		System.setProperty("webdriver.chrome.driver", "/Users/yvonneak/Documents/webDrivers/chrome/chromedriver");
+		//System.setProperty("webdriver.chrome.driver", "/Users/yvonneak/Documents/webDrivers/chrome/chromedriver");
 		
 		driver = new ChromeDriver();
 		

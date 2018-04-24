@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.phpTravels.PHPTravels.SearchHotels">
+      <class name="com.phpTravels.qa.testcases.HomePageTest">
         <methods>
-          <include name="searchHotel"/>
+          <include name="tearDown"/>
+          <include name="quickHomePageHotelLinkPageTest"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.phpTravels.PHPTravels.SearchHotels -->
+      </class> <!-- com.phpTravels.qa.testcases.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

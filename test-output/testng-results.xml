@@ -2,16 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29241" started-at="2018-02-02T22:41:17Z" finished-at="2018-02-02T22:41:46Z">
+  <suite name="Default suite" duration-ms="14593" started-at="2018-04-24T16:33:10Z" finished-at="2018-04-24T16:33:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29241" started-at="2018-02-02T22:41:17Z" finished-at="2018-02-02T22:41:46Z">
-      <class name="com.phpTravels.PHPTravels.SearchHotels">
-        <test-method status="PASS" signature="searchHotel()[pri:0, instance:com.phpTravels.PHPTravels.SearchHotels@5034c75a]" name="searchHotel" duration-ms="29204" started-at="2018-02-02T22:41:17Z" finished-at="2018-02-02T22:41:46Z">
+    <test name="Default test" duration-ms="14593" started-at="2018-04-24T16:33:10Z" finished-at="2018-04-24T16:33:25Z">
+      <class name="com.phpTravels.qa.testcases.HomePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.phpTravels.qa.testcases.HomePageTest@3f49dace]" name="setUp" is-config="true" duration-ms="9146" started-at="2018-04-24T17:33:10Z" finished-at="2018-04-24T17:33:20Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchHotel -->
-      </class> <!-- com.phpTravels.PHPTravels.SearchHotels -->
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="quickHomePageHotelLinkPageTest()[pri:1, instance:com.phpTravels.qa.testcases.HomePageTest@3f49dace]" name="quickHomePageHotelLinkPageTest" duration-ms="5239" started-at="2018-04-24T17:33:20Z" finished-at="2018-04-24T17:33:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quickHomePageHotelLinkPageTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.phpTravels.qa.testcases.HomePageTest@3f49dace]" name="tearDown" is-config="true" duration-ms="179" started-at="2018-04-24T17:33:25Z" finished-at="2018-04-24T17:33:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.phpTravels.qa.testcases.HomePageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
